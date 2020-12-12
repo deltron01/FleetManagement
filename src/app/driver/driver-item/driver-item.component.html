@@ -1,0 +1,19 @@
+
+
+
+
+  <mat-card appShadow class="example-card" >
+    <mat-card-header>
+      
+      <mat-card-title>{{driver.firstName }} {{driver.lastName | uppercase}}</mat-card-title>
+      <mat-card-subtitle>{{driver.drivingLicense}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="{{imgSrc}}" class="card-image" alt="{{driver.firstName}" >
+    <mat-card-content class="card-content">
+      Driver of :  {{driver.vehicle?.brand}} / {{driver.vehicle?.registrationNumber}}
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button (click)="onDriverClick(driver)" >Show</button>
+    </mat-card-actions>
+  </mat-card>
+

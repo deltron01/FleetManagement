@@ -1,0 +1,13 @@
+{
+  "hosting": {
+    "public": "dist\\fleet",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  },
+  "storage": {
+    "rules": "storage.rules"
+  }
+}

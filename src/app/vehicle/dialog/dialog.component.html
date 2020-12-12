@@ -1,0 +1,29 @@
+
+<form class="example-form" #form="ngForm" (ngSubmit)="onSave(form)">
+
+  <mat-form-field class="example-full-width">
+            <mat-label>Registration No.</mat-label>
+            <input matInput ngModel name="registrationNumber"  placeholder="Registration No...">
+          <mat-error *ngIf="form.controls['registrationNumber']?.errors?.required">
+             Registration Number is <strong>required</strong>
+          </mat-error>
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+            <mat-label>Brand..</mat-label>
+            <input matInput ngModel name="brand" placeholder="Brand....">
+            <mat-error *ngIf="form.controls['brand']?.errors?.required">
+               Brand is <strong>required</strong>
+            </mat-error>
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+            <mat-label>Kilometrage.</mat-label>
+            <input matInput ngModel name="currentKm"  placeholder="Kilomters...">
+            <mat-error *ngIf="form.controls['currentKm']?.errors?.required">
+                 Current Km is <strong>required</strong>
+            </mat-error>
+  </mat-form-field>
+  <div class="button-row">
+    <button mat-flat-button color="primary" [disabled]="!form.valid" >{{ editMode? 'Update': 'Add' }}</button>
+    <button mat-flat-button color="accent" type="button"  (click)="form.reset();">Clear</button>
+  </div>
+</form>
